@@ -5,6 +5,13 @@ export const theme = {
     secondaryDark: '#285AB3',
     text: '#28282C',
     textInverse: '#F0F0F0'
+  },
+  fontSizes: {
+    xs: 8,
+    sm: 10,
+    md: 14,
+    lg: 18,
+    xl: 24
   }
 }
 
