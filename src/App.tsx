@@ -1,9 +1,11 @@
+import { ThemeProvider } from '@emotion/react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Cart } from './pages/Cart'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { ProductDetail } from './pages/ProductDetail'
 import { Products } from './pages/Products'
+import { theme } from './style/theme'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +31,11 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  )
 }
 
 export default App

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
+import { ThemeColor } from '../../style/theme'
 
-export const StyledText = styled.p<{ fontColor: string }>`
+export const StyledText = styled.p<{ textColor: ThemeColor }>`
   font-size: 20px;
-  text-transform: uppercase;
-  color: ${(props) => props.fontColor};
+  color: ${({ theme, textColor }) => theme.colors[textColor]};
 `
