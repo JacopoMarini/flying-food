@@ -6,6 +6,7 @@ export const theme = {
     text: '#28282C',
     textInverse: '#F0F0F0'
   },
+  // sizes in rem
   fontSizes: {
     xs: 0.6,
     sm: 0.8,
@@ -19,7 +20,7 @@ export type AppTheme = typeof theme
 
 export type ThemeColor = keyof AppTheme['colors']
 
-export type ThemeSizes = keyof AppTheme['fontSizes']
+export type FontSize = keyof AppTheme['fontSizes']
 
 declare module '@emotion/react' {
   export interface Theme extends AppTheme {}

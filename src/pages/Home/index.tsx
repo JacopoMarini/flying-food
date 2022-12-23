@@ -3,10 +3,10 @@ import { Text } from '../../components/Text'
 export const Home = () => {
   return (
     <div>
-      <Text variant="p" color="text" size="lg">
+      <Text variant="h2" color="text" size="lg" uppercase bold>
         Prova
       </Text>
-      <Text variant="p" color="text" size="sm">
+      <Text variant="h1" color="text" size="sm" uppercase>
         Prova
       </Text>
     </div>
