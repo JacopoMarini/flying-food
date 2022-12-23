@@ -1,19 +1,31 @@
 import { ReactNode } from 'react'
-import { ThemeColor, ThemeSizes } from '../../style/theme'
-import { StyledText } from './styled'
-
-type TextVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
+import { FontSize, ThemeColor } from '../../style/theme'
+import { StyledText, TextVariant } from './styled'
 
 type Props = {
   children: ReactNode
   color?: ThemeColor
   variant?: TextVariant
-  size?: ThemeSizes
+  bold?: boolean
+  uppercase?: boolean
+  size?: FontSize
 }
 
-export const Text = ({ children, color = 'text', variant = 'p', size = 'md' }: Props) => {
+export const Text = ({
+  children,
+  color = 'text',
+  variant = 'p',
+  uppercase = false,
+  bold = false
+}: Props) => {
   return (
-    <StyledText as={variant} textColor={color} textSize={size}>
+    <StyledText
+      as={variant}
+      variant={variant}
+      bold={bold}
+      textColor={color}
+      uppercase={uppercase}
+    >
       {children}
     </StyledText>
   )
