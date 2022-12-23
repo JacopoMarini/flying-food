@@ -4,7 +4,10 @@ export const theme = {
     secondary: '#78A9FF',
     secondaryDark: '#285AB3',
     text: '#28282C',
-    textInverse: '#F0F0F0'
+    textInverse: '#F0F0F0',
+    background: '#FDFDFD',
+    backgroundDark: '',
+    golden: '#EBB056'
   },
   // sizes in rem
   fontSizes: {
@@ -13,7 +16,8 @@ export const theme = {
     md: 1,
     lg: 1.6,
     xl: 2.2
-  }
+  },
+  radii: [4, 8, 12]
 }
 
 export type AppTheme = typeof theme
