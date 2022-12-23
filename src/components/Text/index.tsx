@@ -9,18 +9,21 @@ type Props = {
   bold?: boolean
   uppercase?: boolean
   size?: FontSize
+  className?: string
 }
 
 export const Text = ({
   children,
+  uppercase,
+  className,
+  bold,
   color = 'text',
-  variant = 'p',
-  uppercase = false,
-  bold = false
+  variant = 'p'
 }: Props) => {
   return (
     <StyledText
       as={variant}
+      className={className}
       variant={variant}
       bold={bold}
       textColor={color}

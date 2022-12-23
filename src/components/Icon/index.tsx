@@ -1,17 +1,21 @@
-import { IconDefinition, IconName } from '@fortawesome/fontawesome-svg-core'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { SizeProp } from '@fortawesome/fontawesome-svg-core'
+import { faBagShopping, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ThemeColor } from '../../style/theme'
+import { theme, ThemeColor } from '../../style/theme'
 
-const iconMap: Record<string, IconDefinition> = {
-  star: faStar
+const iconMap = {
+  star: faStar,
+  shopBag: faBagShopping
 }
+
+type IconName = keyof typeof iconMap
 
 type Props = {
   name: IconName
-  bgColor?: ThemeColor
-  border?: boolean
+  color?: ThemeColor
+  size?: SizeProp
 }
-export const Icon = ({ name, bgColor = 'text', border = true }: Props) => {
-  return <FontAwesomeIcon color={bgColor} icon={iconMap[name]} />
+
+export const Icon = ({ name, color = 'primary' }: Props) => {
+  return <FontAwesomeIcon color={theme.colors[color]} icon={iconMap[name]} />
 }

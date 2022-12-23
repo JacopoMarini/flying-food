@@ -1,17 +1,19 @@
-import { ReactNode } from 'react'
 import { ThemeColor } from '../../style/theme'
+import { Text } from '../Text'
+import { StyledTag } from './styled'
 
 type Props = {
-  border?: boolean
-  padding?: boolean
-  bgColor?: ThemeColor
-  children: ReactNode
+  bgColor: ThemeColor
+  text: string
+  color?: ThemeColor
+  className?: string
 }
-export const Tag = ({
-  border = true,
-  padding = true,
-  bgColor = 'primary',
-  children
-}: Props) => {
-  return <div />
+export const Tag = ({ text, bgColor, className, color }: Props) => {
+  return (
+    <StyledTag className={className} rounded bgColor={bgColor}>
+      <Text bold uppercase color={color}>
+        {text}
+      </Text>
+    </StyledTag>
+  )
 }

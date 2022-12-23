@@ -7,16 +7,23 @@ type Props = {
   rounded?: boolean
   children: ReactNode
   shadow?: boolean
+  className?: string
 }
 
 export const Paper = ({
   children,
   bgColor = 'background',
   rounded = true,
-  shadow = true
+  shadow = true,
+  className
 }: Props) => {
   return (
-    <StyledPaper rounded={rounded} bgColor={bgColor} shadow={shadow}>
+    <StyledPaper
+      className={className}
+      rounded={rounded}
+      bgColor={bgColor}
+      shadow={shadow}
+    >
       {children}
     </StyledPaper>
   )

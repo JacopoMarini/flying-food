@@ -7,13 +7,13 @@ const sizeMap: Partial<Record<TextVariant, FontSize>> = {
   h1: 'xl',
   h2: 'lg'
 }
-
 export const StyledText = styled.p<{
   textColor: ThemeColor
   variant: TextVariant
   textSize?: FontSize
   bold?: boolean
   uppercase?: boolean
+  className?: string
 }>`
   color: ${({ theme, textColor }) => theme.colors[textColor]};
   font-size: ${({ theme, textSize, variant }) => {
