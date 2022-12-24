@@ -18,11 +18,14 @@ export const Home = () => {
 
       <Icon name="star" color="primary" />
 
-      <Tag bgColor="text" text="new" />
+      <Tag bgColor="secondary" text="new" color="textInverse" />
 
       <Rating />
 
-      <Avatar />
+      <Avatar username="Jacopo Marini" circle>
+        {' '}
+        test
+      </Avatar>
     </div>
   )
 }
