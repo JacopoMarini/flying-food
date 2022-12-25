@@ -11,6 +11,7 @@ import {
   faIceCream,
   faLemon,
   faLocationDot,
+  faMagnifyingGlass,
   faMartiniGlassCitrus,
   faMedal,
   faMugHot,
@@ -40,7 +41,8 @@ const iconMap = {
   map: faLocationDot,
   delivery: faTruck,
   reward: faMedal,
-  bonus: faGift
+  bonus: faGift,
+  search: faMagnifyingGlass
 }
 
 type IconName = keyof typeof iconMap

@@ -2,6 +2,7 @@ import { Avatar } from '../../components/Avatar'
 import { Icon } from '../../components/Icon'
 import { Paper } from '../../components/Paper'
 import { Rating } from '../../components/Rating'
+import { Searchbar } from '../../components/Searchbar'
 import { Tag } from '../../components/Tag'
 import { Text } from '../../components/Text'
 
@@ -26,6 +27,8 @@ export const Home = () => {
         {' '}
         test
       </Avatar>
+
+      <Searchbar />
     </div>
   )
 }

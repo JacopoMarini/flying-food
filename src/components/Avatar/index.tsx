@@ -20,6 +20,8 @@ export const Avatar = ({ username, size = 48, circle = true, children }: Props) 
     return `${first}${last}`
   }
 
+  getInitials()
+
   return (
     <StyledAvatar circle={circle} size={size}>
       <Image imgUrl={'immagine'} />
