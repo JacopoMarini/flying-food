@@ -21,7 +21,8 @@ export const Home = () => {
 
       <Icon name="star" color="primary" />
 
-      <Tag bgColor="secondary" text="new" color="textInverse" />
+      <Tag bgColor="secondary" title="NEW" color="text" size="lg" />
+      <Tag bgColor="primary" title="new" color="textInverse" size="lg" />
 
       <Rating />
 

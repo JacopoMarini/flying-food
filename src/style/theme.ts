@@ -50,10 +50,10 @@ export const theme = {
     }
   },
   radii: [4, 8, 12],
-  spacing: {
-    small: 8,
-    medium: 12,
-    large: 16
+  sizes: {
+    sm: 8,
+    md: 12,
+    lg: 16
   }
 } as const
 
@@ -62,6 +62,8 @@ export type AppTheme = typeof theme
 export type ThemeColor = keyof AppTheme['colors']
 
 export type FontSize = keyof AppTheme['fontSizes']
+
+export type Size = keyof AppTheme['sizes']
 
 declare module '@emotion/react' {
   export interface Theme extends AppTheme {}
