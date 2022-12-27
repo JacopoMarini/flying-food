@@ -16,6 +16,7 @@ export const StyledText = styled.p<{
     const size = textSize || (theme.textVariants[variant].size as FontSize) || 'md'
     return theme.fontSizes[size]
   }}rem;
+  line-height: ${({ theme, variant }) => theme.textVariants[variant].lineHeight};
   font-weight: ${({ bold }) => (bold ? 700 : 400)};
   text-transform: ${({ uppercase }) => uppercase && 'uppercase'};
 `
