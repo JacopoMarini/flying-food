@@ -1,3 +1,4 @@
+import { Icon } from '../Icon'
 import { Text } from '../Text'
 import { StyledMenuItem } from './styled'
 
@@ -9,12 +10,8 @@ type Props = {
 export const MenuItem = ({ text, second }: Props) => {
   return (
     <StyledMenuItem>
-      <Text variant="h2" color="text" bold>
-        {text}
-      </Text>
-      <Text variant="h2" color="text">
-        {second}
-      </Text>
+      <Icon name="star" color="textInverse" />
+      <Text>{text}</Text>
     </StyledMenuItem>
   )
 }

@@ -10,6 +10,7 @@ type Props = {
   uppercase?: boolean
   size?: FontSize
   className?: string
+  capitalize?: boolean
 }
 
 export const Text = ({
@@ -18,7 +19,8 @@ export const Text = ({
   className,
   bold,
   color = 'text',
-  variant = 'p'
+  variant = 'p',
+  capitalize
 }: Props) => {
   return (
     <StyledText
@@ -28,6 +30,7 @@ export const Text = ({
       bold={bold}
       textColor={color}
       uppercase={uppercase}
+      capitalize={capitalize}
     >
       {children}
     </StyledText>

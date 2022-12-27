@@ -35,8 +35,8 @@ export const Home = () => {
       </Avatar>
 
       <Searchbar />
-      <SectionTitle text="lista" />
-      <MenuItem text="our" second="products" />
+      <MenuItem text="lista" />
+      <SectionTitle text="our" secondary="products" />
     </div>
   )
 }

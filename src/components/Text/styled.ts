@@ -10,13 +10,18 @@ export const StyledText = styled.p<{
   bold?: boolean
   uppercase?: boolean
   className?: string
+  capitalize?: boolean
 }>`
   color: ${({ theme, textColor }) => theme.colors[textColor]};
   font-size: ${({ theme, textSize, variant }) => {
-    const size = textSize || (theme.textVariants[variant].size as FontSize) || 'md'
-    return theme.fontSizes[size]
-  }}rem;
+    const variantFontSize = theme.textVariants[variant].fontSize
+    if (variantFontSize === 'inherit') return variantFontSize
+    const size = textSize || variantFontSize || 'md'
+    return theme.fontSizes[size] + 'rem'
+  }};
   line-height: ${({ theme, variant }) => theme.textVariants[variant].lineHeight};
-  font-weight: ${({ bold }) => (bold ? 700 : 400)};
+  font-weight: ${({ bold }) => (bold ? 'bold' : 'normal')};
   text-transform: ${({ uppercase }) => uppercase && 'uppercase'};
+  text-transform: ${({ capitalize }) => capitalize && 'capitalize'};
+  display: inline-block;
 `
