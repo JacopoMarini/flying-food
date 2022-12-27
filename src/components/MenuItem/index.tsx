@@ -1,17 +1,25 @@
-import { Icon } from '../Icon'
+import { NavLink } from 'react-router-dom'
+import { ThemeColor } from '../../style/theme'
+import { Icon, IconName } from '../Icon'
 import { Text } from '../Text'
 import { StyledMenuItem } from './styled'
 
 type Props = {
-  text: string
-  second?: string
+  title: string
+  icon?: IconName
+  linkUrl: string
+  color?: ThemeColor
 }
 
-export const MenuItem = ({ text, second }: Props) => {
+export const MenuItem = ({ title, icon, linkUrl, color = 'text' }: Props) => {
   return (
-    <StyledMenuItem>
-      <Icon name="star" color="textInverse" />
-      <Text>{text}</Text>
-    </StyledMenuItem>
+    <NavLink to={linkUrl}>
+      <StyledMenuItem>
+        {icon && <Icon name={icon} color={color} />}
+        <Text color={color} size="sm" uppercase>
+          {title}
+        </Text>
+      </StyledMenuItem>
+    </NavLink>
   )
 }

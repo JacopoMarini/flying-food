@@ -45,7 +45,7 @@ const iconMap = {
   search: faMagnifyingGlass
 }
 
-type IconName = keyof typeof iconMap
+export type IconName = keyof typeof iconMap
 
 type Props = {
   name: IconName

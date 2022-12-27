@@ -35,7 +35,7 @@ export const Home = () => {
       </Avatar>
 
       <Searchbar />
-      <MenuItem text="lista" />
+      <MenuItem title="lista" linkUrl="#" icon="star" />
       <SectionTitle text="our" secondary="products" />
     </div>
   )
