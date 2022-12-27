@@ -49,7 +49,12 @@ export const theme = {
       lineHeight: 'inherit'
     }
   },
-  radii: [4, 8, 12]
+  radii: [4, 8, 12],
+  spacing: {
+    small: 8,
+    medium: 12,
+    large: 16
+  }
 } as const
 
 export type AppTheme = typeof theme
