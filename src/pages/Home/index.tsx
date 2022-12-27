@@ -1,8 +1,10 @@
 import { Avatar } from '../../components/Avatar'
 import { Icon } from '../../components/Icon'
+import { MenuItem } from '../../components/MenuItem'
 import { Paper } from '../../components/Paper'
 import { Rating } from '../../components/Rating'
 import { Searchbar } from '../../components/Searchbar'
+import { SectionTitle } from '../../components/SectionTitle'
 import { Tag } from '../../components/Tag'
 import { Text } from '../../components/Text'
 
@@ -33,6 +35,8 @@ export const Home = () => {
       </Avatar>
 
       <Searchbar />
+      <SectionTitle text="lista" />
+      <MenuItem text="our" second="products" />
     </div>
   )
 }
