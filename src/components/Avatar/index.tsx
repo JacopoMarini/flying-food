@@ -9,23 +9,25 @@ type Props = {
   size?: number
   username?: string
   children: ReactNode
+  imgSrc?: string
 }
 
-export const Avatar = ({ username, size = 48, circle = true, children }: Props) => {
-  const getInitials = () => {
-    if (!username) return
-    const initials = username.split(' ')
-    const first = initials.at(0)?.charAt(0) || ''
-    const last = initials.at(-1)?.charAt(0) || ''
-    return `${first}${last}`
+const getInitials = (username: string) => {
+  const initials = username.split(' ')
+  const first = initials.at(0)?.charAt(0) || ''
+  const last = initials.at(-1)?.charAt(0) || ''
+  return `${first}${last}`
+}
+export const Avatar = ({ username, size = 48, circle = true, imgSrc }: Props) => {
+  const renderContent = () => {
+    if (imgSrc) return <Image width="100%" height="100%" fit="cover" src={imgSrc} />
+    if (username) return <Text color="textInverse">{getInitials(username)}</Text>
+    return null
   }
-
-  getInitials()
 
   return (
     <StyledAvatar circle={circle} size={size}>
-      <Image imgUrl={'immagine'} />
-      <Text>{getInitials()}</Text>
+      {renderContent()}
     </StyledAvatar>
   )
 }

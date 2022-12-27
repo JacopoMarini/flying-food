@@ -1,6 +1,12 @@
+import { ObjectFit, StyledImage } from './styled'
+
 type Props = {
-  imgUrl: string
+  src?: string
+  alt?: string
+  fit?: ObjectFit
+  width?: number | string
+  height?: number | string
 }
-export const Image = ({ imgUrl }: Props) => {
-  return <img src={imgUrl} alt="" />
+export const Image = (Props: Props) => {
+  return <StyledImage {...Props} />
 }

@@ -23,7 +23,11 @@ export const Home = () => {
 
       <Rating />
 
-      <Avatar username="Jacopo Marini" circle>
+      <Avatar
+        username="Jacopo Marini"
+        imgSrc="https://www.w3schools.com/howto/img_avatar.png"
+        circle
+      >
         {' '}
         test
       </Avatar>

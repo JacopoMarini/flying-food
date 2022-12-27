@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { center } from '../../style/utils'
 
 export const StyledAvatar = styled.div<{
   circle?: boolean
@@ -7,8 +8,7 @@ export const StyledAvatar = styled.div<{
   border-radius: ${({ circle }) => (circle ? '50%' : 'none')};
   height: ${({ size }) => size}px;
   width: ${({ size }) => size}px;
-  background-color: bisque;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: grey;
+  overflow: hidden;
+  ${center}
 `
