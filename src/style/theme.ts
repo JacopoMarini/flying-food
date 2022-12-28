@@ -7,7 +7,8 @@ export const theme = {
     textInverse: '#F0F0F0',
     background: '#FDFDFD',
     backgroundDark: '#36373B',
-    lightGrey: '#c9c9c9'
+    lightGrey: '#c9c9c9',
+    danger: 'red'
   },
   // sizes in rem
   fontSizes: {

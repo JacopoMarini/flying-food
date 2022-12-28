@@ -1,5 +1,3 @@
-import React from 'react'
-
-export const index = () => {
-  return <div>index</div>
-}
+export { BaseButton } from './BaseButton'
+export { IconButton } from './IconButton'
+export { Button } from './Button'

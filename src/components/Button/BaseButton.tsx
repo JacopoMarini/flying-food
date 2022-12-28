@@ -8,10 +8,9 @@ type Props = {
 export const BaseButton = ({
   children,
   className,
-  color = 'text',
   size = 'md',
   radius = 4,
-  bgColor = 'lightGrey',
+  bgColor = 'primary',
   outlined
 }: Props) => {
   return (
@@ -20,7 +19,7 @@ export const BaseButton = ({
       size={size}
       bgColor={bgColor}
       className={className}
-      color={color}
+      outlined={outlined}
     >
       {children}
     </StyledBaseButton>

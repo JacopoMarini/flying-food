@@ -1,9 +1,10 @@
-import { ReactNode } from 'react'
+import { IconName } from '@fortawesome/fontawesome-svg-core'
 import { BaseButton } from './BaseButton'
 
 type Props = {
-  children: ReactNode
+  children: string
+  icon?: IconName
 }
-export const Button = ({ children }: Props) => {
-  return <BaseButton>{children}</BaseButton>
+export const Button = ({ children, icon }: Props) => {
+  return <BaseButton>Testo oppure testo più icona</BaseButton>
 }
