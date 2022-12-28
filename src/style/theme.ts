@@ -19,30 +19,30 @@ export const theme = {
   textVariants: {
     h1: {
       fontSize: 'xl',
-      lineHeight: 1.4
+      lineHeight: 1.8
     },
     h2: {
       fontSize: 'lg',
-      lineHeight: 1.2
+      lineHeight: 1.8
     },
     h3: {
       fontSize: 'lg',
-      lineHeight: 1.2
-    },
-    p: {
-      fontSize: 'md',
-      lineHeight: 1
+      lineHeight: 1.6
     },
     h4: {
       fontSize: 'lg',
-      lineHeight: 1.2
+      lineHeight: 1.6
     },
     h5: {
       fontSize: 'lg',
-      lineHeight: 1.2
+      lineHeight: 1.6
     },
     h6: {
       fontSize: 'lg',
+      lineHeight: 1.6
+    },
+    p: {
+      fontSize: 'md',
       lineHeight: 1.2
     },
     span: {

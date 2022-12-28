@@ -10,10 +10,12 @@ export const SectionTitle = ({ text, secondary }: Props) => {
   return (
     <StyledSectionTitle>
       <Text variant="h2" capitalize>
-        <Text variant="span" bold>
+        <Text variant="span" bold inline>
           {text}
         </Text>
-        <Text variant="span">{secondary}</Text>
+        <Text variant="span" inline>
+          {secondary}
+        </Text>
       </Text>
     </StyledSectionTitle>
   )
