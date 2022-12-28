@@ -9,6 +9,6 @@ type Props = {
   size?: SizeProp
 }
 
-export const Icon = ({ name, color = 'background' }: Props) => {
-  return <FontAwesomeIcon color={theme.colors[color]} icon={iconMap[name]} />
+export const Icon = ({ name, size, color = 'background' }: Props) => {
+  return <FontAwesomeIcon color={theme.colors[color]} icon={iconMap[name]} size={size} />
 }

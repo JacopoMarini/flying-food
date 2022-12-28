@@ -5,6 +5,7 @@ import {
   faLinkedin,
   faTwitter
 } from '@fortawesome/free-brands-svg-icons'
+import { faStar as faStarEmpty, faClock } from '@fortawesome/free-regular-svg-icons'
 import {
   faBagShopping,
   faBowlFood,
@@ -13,7 +14,6 @@ import {
   faCake,
   faCakeCandles,
   faCarrot,
-  faClock,
   faGift,
   faIceCream,
   faLemon,
@@ -29,7 +29,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const iconMap = {
-  star: faStar,
+  starFull: faStar,
+  starEmpty: faStarEmpty,
   shopBag: faBagShopping,
   burger: faBurger,
   pizza: faPizzaSlice,
