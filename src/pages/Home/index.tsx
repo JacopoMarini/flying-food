@@ -7,6 +7,7 @@ import { Searchbar } from '../../components/Searchbar'
 import { SectionTitle } from '../../components/SectionTitle'
 import { Tag } from '../../components/Tag'
 import { Text } from '../../components/Text'
+import { WorkingHours } from '../../components/WorkingHours'
 
 export const Home = () => {
   return (
@@ -38,6 +39,8 @@ export const Home = () => {
       <Searchbar />
       <MenuItem title="lista" linkUrl="#" icon="star" />
       <SectionTitle text="our" secondary="products" />
+
+      <WorkingHours title="working hours" opening="8:00" closing="23:00" />
     </div>
   )
 }

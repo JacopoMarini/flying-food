@@ -1,7 +1,7 @@
 import { ObjectFit, StyledImage } from './styled'
 
 type Props = {
-  src?: string
+  src: string
   alt?: string
   fit?: ObjectFit
   width?: number | string
