@@ -2,17 +2,17 @@ import { Icon } from '../Icon'
 import { StyledRating } from './styled'
 
 type Props = {
-  flex?: boolean
+  value: number
 }
 
-export const Rating = ({ flex = true }: Props) => {
+export const Rating = ({ value }: Props) => {
   return (
-    <StyledRating flex>
-      <Icon name="star" />
-      <Icon name="star" />
-      <Icon name="star" />
-      <Icon name="star" />
-      <Icon name="star" />
+    <StyledRating>
+      <Icon name="starFull" />
+      <Icon name="starFull" />
+      <Icon name="starFull" />
+      <Icon name="starEmpty" />
+      <Icon name="starEmpty" />
     </StyledRating>
   )
 }

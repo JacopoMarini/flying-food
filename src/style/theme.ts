@@ -50,11 +50,11 @@ export const theme = {
       lineHeight: 'inherit'
     }
   },
-  radii: [4, 8, 12],
+  radii: [4, 8, 12, 20, 100],
   sizes: {
     sm: 8,
-    md: 12,
-    lg: 16
+    md: 16,
+    lg: 32
   }
 } as const
 
