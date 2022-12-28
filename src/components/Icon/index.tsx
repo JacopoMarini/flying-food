@@ -1,5 +1,12 @@
 import { SizeProp } from '@fortawesome/fontawesome-svg-core'
 import {
+  faFacebook,
+  faGooglePlus,
+  faInstagram,
+  faLinkedin,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons'
+import {
   faBagShopping,
   faBowlFood,
   faBowlRice,
@@ -42,7 +49,12 @@ const iconMap = {
   delivery: faTruck,
   reward: faMedal,
   bonus: faGift,
-  search: faMagnifyingGlass
+  search: faMagnifyingGlass,
+  twitter: faTwitter,
+  facebook: faFacebook,
+  google: faGooglePlus,
+  instagram: faInstagram,
+  linkedin: faLinkedin
 }
 
 export type IconName = keyof typeof iconMap

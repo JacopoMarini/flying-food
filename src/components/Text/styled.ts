@@ -12,10 +12,10 @@ export const StyledText = styled.p<{
   className?: string
   capitalize?: boolean
 }>`
-  color: ${({ theme, textColor }) => theme.colors[textColor]};
+  color: ${({ theme, textColor }) => textColor && theme.colors[textColor]};
   font-size: ${({ theme, textSize, variant }) => {
     const variantFontSize = theme.textVariants[variant].fontSize
-    if (variantFontSize === 'inherit') return variantFontSize
+    if (variantFontSize === 'inherit') return
     const size = textSize || variantFontSize || 'md'
     return theme.fontSizes[size] + 'rem'
   }};
