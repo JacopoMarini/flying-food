@@ -1,13 +1,40 @@
+import { ThemeColor } from '../../style/theme'
 import { Icon } from '../Icon'
+import { StyledSocial } from './styled'
 
-export const Social = () => {
+const config = [
+  {
+    name: 'twitter',
+    url: '#'
+  },
+  {
+    name: 'facebook',
+    url: '#'
+  },
+  {
+    name: 'google',
+    url: '#'
+  },
+  {
+    name: 'instagram',
+    url: '#'
+  },
+  {
+    name: 'linkedin',
+    url: '#'
+  }
+] as const
+
+type Props = {
+  color?: ThemeColor
+}
+
+export const Social = ({ color = 'lightGrey' }: Props) => {
   return (
-    <div>
-      <Icon name="twitter" />
-      <Icon name="facebook" />
-      <Icon name="google" />
-      <Icon name="instagram" />
-      <Icon name="linkedin" />
-    </div>
+    <StyledSocial>
+      {config.map(({ name }) => (
+        <Icon key={name} name={name} color={color} />
+      ))}
+    </StyledSocial>
   )
 }

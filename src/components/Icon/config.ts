@@ -1,4 +1,3 @@
-import { SizeProp } from '@fortawesome/fontawesome-svg-core'
 import {
   faFacebook,
   faGooglePlus,
