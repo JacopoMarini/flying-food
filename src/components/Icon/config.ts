@@ -13,6 +13,7 @@ import {
   faCake,
   faCakeCandles,
   faCarrot,
+  faClock,
   faGift,
   faIceCream,
   faLemon,
@@ -51,7 +52,8 @@ export const iconMap = {
   facebook: faFacebook,
   google: faGooglePlus,
   instagram: faInstagram,
-  linkedin: faLinkedin
+  linkedin: faLinkedin,
+  clock: faClock
 }
 
 export type IconName = keyof typeof iconMap

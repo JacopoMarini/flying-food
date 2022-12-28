@@ -1,27 +1,36 @@
-import React from 'react'
-import { Image } from '../Image'
+import { Icon } from '../Icon'
 import { Text } from '../Text'
-import { StyledStackH, StyledStackV } from './styled'
+import { StyledWorkingHours } from './styled'
+
+const variantColors = {
+  light: {
+    text: 'textInverse',
+    icon: 'lightGrey'
+  },
+  dark: {
+    text: 'text',
+    icon: 'text'
+  }
+} as const
 
 type Props = {
-  title: string
+  variant: 'light' | 'dark'
   opening: string
   closing: string
 }
 
-export const WorkingHours = ({ title, opening, closing }: Props) => {
+export const WorkingHours = ({ variant, opening, closing }: Props) => {
+  const { text, icon } = variantColors[variant]
+
   return (
-    <StyledStackH>
-      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW8OdM5dZQyk0J2GTSTj7wkINQJNkp20m8iQ&usqp=CAU" />
-      <StyledStackV>
-        <Text variant="h2" uppercase>
-          {title}
-        </Text>
-        <Text variant="p">
-          <Text variant="span">{opening}</Text>
-          <Text variant="span">{closing}</Text>
-        </Text>
-      </StyledStackV>
-    </StyledStackH>
+    <StyledWorkingHours>
+      <Icon name="clock" color={icon} size="lg" />
+      <Text variant="p" color={text} uppercase size="sm">
+        working hours
+      </Text>
+      <Text variant="p">
+        {opening} {closing}
+      </Text>
+    </StyledWorkingHours>
   )
 }
