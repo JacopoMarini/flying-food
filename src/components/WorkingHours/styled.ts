@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 export const StyledStackH = styled.div`
   display: flex;
   height: 44px;
+  width: 44px;
   justify-content: flex-start;
 `
 
