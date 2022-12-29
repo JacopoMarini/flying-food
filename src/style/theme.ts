@@ -53,9 +53,14 @@ export const theme = {
   },
   radii: [4, 8, 12, 20, 100],
   sizes: {
-    sm: 8,
-    md: 16,
-    lg: 32
+    sm: 18,
+    md: 32,
+    lg: 46
+  },
+  spacings: {
+    sm: 16,
+    md: 32,
+    lg: 64
   }
 } as const
 

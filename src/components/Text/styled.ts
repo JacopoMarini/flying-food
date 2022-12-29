@@ -16,6 +16,7 @@ export type StyledTextProps = {
 export const StyledText = styled.p<StyledTextProps>`
   color: ${({ theme, color }) => color && theme.colors[color]};
   font-size: ${({ theme, size, variant }) => {
+    if (size) return theme.fontSizes[size]
     const variantFontSize = theme.textVariants[variant].fontSize
     if (variantFontSize === 'inherit') return
     const fontSize = size || variantFontSize
