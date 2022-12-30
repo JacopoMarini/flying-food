@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Size, ThemeColor } from '../../style/theme'
 import { center } from '../../style/utils'
+import { Text } from '../Text'
 
 export type StyledBaseButtonProps = {
   bgColor: ThemeColor
@@ -44,4 +45,9 @@ export const IconContainer = styled.div<{ bgColor?: ThemeColor }>`
   aspect-ratio: 1;
   height: 100%;
   ${center}
+`
+export const StyledText = styled(Text)<{ btnsize: Size; hasIcon: boolean }>`
+  padding-right: ${({ theme, btnsize, hasIcon }) =>
+    theme.spacings[btnsize] * (hasIcon ? 0.5 : 1)}px;
+  padding-left: ${({ theme, btnsize }) => theme.spacings[btnsize]}px;
 `

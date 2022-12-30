@@ -1,9 +1,8 @@
 import { Size, ThemeColor } from '../../style/theme'
 import { Icon } from '../Icon'
 import { IconName } from '../Icon/config'
-import { Text } from '../Text'
 import { BaseButton } from './BaseButton'
-import { IconContainer, TextContainer } from './styled'
+import { IconContainer, StyledText } from './styled'
 
 type Props = {
   children: string
@@ -14,7 +13,9 @@ type Props = {
   bgColor?: ThemeColor
   outlined?: boolean
   size?: Size
+  btnsize?: Size
   inverse?: boolean
+  onClick?: () => void
 }
 
 export const Button = ({
@@ -26,7 +27,9 @@ export const Button = ({
   inverse,
   bgColor = 'primary',
   color = 'text',
-  size = 'md'
+  size = 'md',
+  btnsize,
+  onClick
 }: Props) => {
   const textSize = size === 'lg' ? 'md' : 'sm'
   const iconSize = size === 'lg' ? 'xl' : 'sm'
@@ -34,12 +37,22 @@ export const Button = ({
   const textColor = inverse ? bgColor : color
 
   return (
-    <BaseButton bgColor={backgroundColor} size={size} outlined={outlined}>
-      <TextContainer size={size} hasIcon={!!icon}>
-        <Text variant="span" size={textSize} color={textColor} uppercase>
-          {children}
-        </Text>
-      </TextContainer>
+    <BaseButton
+      bgColor={backgroundColor}
+      size={size}
+      outlined={outlined}
+      onClick={onClick}
+    >
+      <StyledText
+        btnsize={size}
+        size={textSize}
+        hasIcon={!!icon}
+        variant="span"
+        color={textColor}
+        uppercase
+      >
+        {children}
+      </StyledText>
       {icon && (
         <IconContainer bgColor={iconBgColor}>
           <Icon name={icon} color={iconColor} size={iconSize} />
