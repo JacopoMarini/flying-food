@@ -20,7 +20,8 @@ const getInitials = (username: string) => {
 }
 export const Avatar = ({ username, size = 48, circle = true, imgSrc }: Props) => {
   const renderContent = () => {
-    if (imgSrc) return <Image width="100%" height="100%" fit="cover" src={imgSrc} />
+    if (imgSrc)
+      return <Image width="100%" height="100%" fit="cover" src={imgSrc} alt="User" />
     if (username) return <Text color="textInverse">{getInitials(username)}</Text>
     return null
   }

@@ -16,9 +16,8 @@ export const globalStyle = css`
   }
 
   .prova {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 `

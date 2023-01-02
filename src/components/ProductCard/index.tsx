@@ -1,13 +1,13 @@
 import { IconButton } from '../Button'
-import { ProductDescription } from '../ProductDescription'
-import { ProductThumb } from '../ProductThumb'
+import { ProductDescription } from './ProductDescription'
+import { ProductThumb } from './ProductThumb'
 import { StyledCard, StyledShopButton, StyledTextWrapper } from './styled'
 
 type Props = {
   productSrc: string
   title: string
   name: string
-  avaible: string
+  available: boolean
   stars: number
   price: string
 }
@@ -16,17 +16,17 @@ export const ProductCard = ({
   productSrc,
   title,
   name,
-  avaible,
+  available,
   stars,
   price
 }: Props) => {
   return (
     <StyledCard>
-      <ProductThumb src={productSrc} title={title} />
+      <ProductThumb src={productSrc} isNew alt={title} />
       <StyledTextWrapper>
         <ProductDescription
           productName={name}
-          avaible={avaible}
+          available={available}
           stars={stars}
           price={price}
         />

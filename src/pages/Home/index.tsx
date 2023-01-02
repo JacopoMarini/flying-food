@@ -15,16 +15,16 @@ export const Home = () => {
         title="NEW"
         productSrc="https://www.nicepng.com/png/full/52-522825_hamburguesas-de-burger-king.png"
         name="Angus Burger"
-        avaible="avaible"
-        stars={4.5}
+        available
+        stars={2}
         price="4.50"
       />
       <ProductCard
         title="NEW"
         productSrc="https://www.nicepng.com/png/full/52-522825_hamburguesas-de-burger-king.png"
         name="Angus Burger"
-        avaible="avaible"
-        stars={4.5}
+        available
+        stars={5}
         price="4.50"
       />
 
@@ -32,8 +32,17 @@ export const Home = () => {
         title="NEW"
         productSrc="https://www.nicepng.com/png/full/52-522825_hamburguesas-de-burger-king.png"
         name="Angus Burger"
-        avaible="avaible"
-        stars={4.5}
+        available
+        stars={3.5}
+        price="4.50"
+      />
+
+      <ProductCard
+        title="NEW"
+        productSrc="https://www.nicepng.com/png/full/52-522825_hamburguesas-de-burger-king.png"
+        name="Angus Burger"
+        available
+        stars={4}
         price="4.50"
       />
     </div>
