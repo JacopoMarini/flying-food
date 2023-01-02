@@ -5,7 +5,7 @@ import { StyledPaper } from './styled'
 type Props = {
   bgColor?: ThemeColor
   rounded?: boolean
-  children: ReactNode
+  children?: ReactNode
   shadow?: boolean
   className?: string
 }

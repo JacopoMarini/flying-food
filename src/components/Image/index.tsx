@@ -6,6 +6,7 @@ type Props = {
   fit?: ObjectFit
   width?: number | string
   height?: number | string
+  className?: string
 }
 export const Image = (Props: Props) => {
   return <StyledImage {...Props} />

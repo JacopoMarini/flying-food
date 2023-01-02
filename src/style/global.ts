@@ -14,4 +14,11 @@ export const globalStyle = css`
   a {
     text-decoration: none;
   }
+
+  .prova {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+  }
 `

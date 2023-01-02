@@ -4,7 +4,7 @@ import { StyledTag } from './styled'
 
 type Props = {
   bgColor: ThemeColor
-  title: string
+  title?: string
   color?: ThemeColor
   className?: string
   size?: Size
