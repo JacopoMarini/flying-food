@@ -1,19 +1,18 @@
-import { ThemeColor } from '../../style/theme'
 import { IconButton } from '../Button'
-import { IconName } from '../Icon/config'
-import { PosAbsolute, PosRelative, StyledInput } from './styled'
+import { Input } from '../Input'
+import { StyledSearchbar } from './styled'
 
 type Props = {
-  icon: IconName
-  outlined?: ThemeColor
-  border?: ThemeColor
+  onChange?: (value: string) => void
+  outlined?: boolean
+  value?: string
 }
 
-export const Searchbar = ({ icon, outlined, border = 'lightGrey' }: Props) => {
+export const Searchbar = ({ outlined, onChange, value }: Props) => {
   return (
-    <PosRelative>
-      <StyledInput placeholder="search" outlined={outlined} border={border} />
-      <PosAbsolute>{icon && <IconButton icon={icon} />}</PosAbsolute>
-    </PosRelative>
+    <StyledSearchbar outlined={outlined}>
+      <Input onChange={onChange} placeholder="Search" value={value} />
+      <IconButton icon="search" color="text" bgColor="primary" />
+    </StyledSearchbar>
   )
 }
