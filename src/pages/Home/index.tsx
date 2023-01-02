@@ -1,5 +1,4 @@
 import { ProductCard } from '../../components/ProductCard'
-import { ProductThumb } from '../../components/ProductThumb'
 
 export const Home = () => {
   return (
@@ -15,7 +14,7 @@ export const Home = () => {
       <ProductCard
         title="NEW"
         productSrc="https://www.nicepng.com/png/full/52-522825_hamburguesas-de-burger-king.png"
-        productName="Angus Burger"
+        name="Angus Burger"
         avaible="avaible"
         stars={4.5}
         price="4.50"
@@ -23,7 +22,16 @@ export const Home = () => {
       <ProductCard
         title="NEW"
         productSrc="https://www.nicepng.com/png/full/52-522825_hamburguesas-de-burger-king.png"
-        productName="Angus Burger"
+        name="Angus Burger"
+        avaible="avaible"
+        stars={4.5}
+        price="4.50"
+      />
+
+      <ProductCard
+        title="NEW"
+        productSrc="https://www.nicepng.com/png/full/52-522825_hamburguesas-de-burger-king.png"
+        name="Angus Burger"
         avaible="avaible"
         stars={4.5}
         price="4.50"

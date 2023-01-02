@@ -1,34 +1,39 @@
-import { Paper } from '../Paper'
+import { IconButton } from '../Button'
+import { ProductDescription } from '../ProductDescription'
 import { ProductThumb } from '../ProductThumb'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
-import { StyledPaper } from './styled'
+import { StyledCard, StyledShopButton, StyledTextWrapper } from './styled'
 
 type Props = {
   productSrc: string
-  productName: string
+  title: string
+  name: string
   avaible: string
   stars: number
   price: string
-  title?: string
 }
 
 export const ProductCard = ({
   productSrc,
-  productName,
+  title,
+  name,
   avaible,
   stars,
-  price,
-  title
+  price
 }: Props) => {
   return (
-    <StyledPaper>
-      <Stack direction="vertical" gap={10}>
-        <ProductThumb src={productSrc} title={title} />
-        <Text capitalize bold>
-          {productName}
-        </Text>
-      </Stack>
-    </StyledPaper>
+    <StyledCard>
+      <ProductThumb src={productSrc} title={title} />
+      <StyledTextWrapper>
+        <ProductDescription
+          productName={name}
+          avaible={avaible}
+          stars={stars}
+          price={price}
+        />
+      </StyledTextWrapper>
+      <StyledShopButton>
+        <IconButton icon="shopBag" size="lg" color="textInverse" />
+      </StyledShopButton>
+    </StyledCard>
   )
 }
