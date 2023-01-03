@@ -1,36 +1,31 @@
 import styled from '@emotion/styled'
+import { abs, pseudo } from '../../style/utils'
 import { Tag } from '../Tag'
 
 export const StyledCard = styled.div`
   padding: 42px 16px;
   position: relative;
-  max-width: 280px;
+  max-width: 240px;
 
   &::after {
-    content: '';
-    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background-color: white;
     transform: skew(5deg);
-    z-index: 1;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    ${pseudo}
   }
 
   &::before {
-    content: '';
-    width: 100%;
     height: 50%;
     position: absolute;
     bottom: 0;
-    left: -10px;
+    left: -6px;
     background-color: #729ce4;
-    transform: skew(-6deg);
-    z-index: 1;
-    border-radius: 8px;
+    transform: skew(-4deg);
+    ${pseudo}
   }
 `
 
@@ -41,11 +36,10 @@ export const StyledTextWrapper = styled.div`
 `
 
 export const StyledShopButton = styled.div`
-  position: absolute;
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  ${abs}
 `
 
 export const StyledProductThumb = styled.div`
@@ -60,16 +54,14 @@ export const StyledProductThumb = styled.div`
   }
 
   &::after {
-    content: '';
-    width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     background-color: #edeff3;
     transform: skew(5deg);
-    z-index: 2;
-    border-radius: 8px;
+    transform-origin: bottom;
+    ${pseudo}
+    ${abs}
   }
 `
 

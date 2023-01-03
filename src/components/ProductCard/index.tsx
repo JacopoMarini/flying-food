@@ -4,32 +4,21 @@ import { ProductThumb } from './ProductThumb'
 import { StyledCard, StyledShopButton, StyledTextWrapper } from './styled'
 
 type Props = {
-  productSrc: string
-  title: string
+  id?: string
+  imgSrc: string
   name: string
-  available: boolean
-  stars: number
+  isAvailable?: boolean
+  rating: number
   price: string
+  onClick?: (id: string) => void
 }
 
-export const ProductCard = ({
-  productSrc,
-  title,
-  name,
-  available,
-  stars,
-  price
-}: Props) => {
+export const ProductCard = ({ imgSrc, name, rating, price, onClick }: Props) => {
   return (
     <StyledCard>
-      <ProductThumb src={productSrc} isNew alt={title} />
+      <ProductThumb src={imgSrc} isNew alt={name} />
       <StyledTextWrapper>
-        <ProductDescription
-          productName={name}
-          available={available}
-          stars={stars}
-          price={price}
-        />
+        <ProductDescription productName={name} stars={rating} price={price} isAvailable />
       </StyledTextWrapper>
       <StyledShopButton>
         <IconButton icon="shopBag" size="lg" color="textInverse" />

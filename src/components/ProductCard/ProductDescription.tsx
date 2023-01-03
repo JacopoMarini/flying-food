@@ -5,13 +5,13 @@ import { Text } from '../Text'
 
 type Props = {
   productName: string
-  available: boolean
+  isAvailable: boolean
   stars: number
   price: string
   title?: string
 }
 
-export const ProductDescription = ({ productName, available, stars, price }: Props) => {
+export const ProductDescription = ({ productName, isAvailable, stars, price }: Props) => {
   return (
     <Stack direction="vertical" gap={14}>
       <Text capitalize bold size="lg">
